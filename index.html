@@ -64,7 +64,9 @@
         <!-- main -->
         <div class="container main">
           <h1 class="main__title">Эффективные решения для вашего бизнеса</h1>
-          <button class="main__button" type="button">Заказать услугу</button>
+          <button class="main__button" type="button" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
       </section>
 
@@ -460,9 +462,9 @@
 
       <!-- MODAL WINDOW -->
 
-      <div class="backdrop is-hidden">
+      <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <button class="modal__button">
+          <button class="modal__button" data-modal-close>
             <svg class="modal__svg">
               <use
                 href="./images/svg_directory/svg_sprite.svg#icon-modal_cross"
@@ -545,5 +547,9 @@
       </div>
       <!-- /container-->
     </footer>
+
+    <!-- JS Scripts -->
+
+    <script src="./modal.js"></script>
   </body>
 </html>
