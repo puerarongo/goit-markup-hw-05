@@ -54,6 +54,10 @@ p {
   padding: 0;
 }
 
+img {
+  display: block;
+}
+
 /* !!! Containers !!! */
 
 .container {
@@ -122,7 +126,9 @@ p {
   display: flex;
 }
 
-.nav__item li:not(:last-child),
+.nav__item li:not(:last-child) {
+  margin-right: 50px;
+}
 .contacts li:not(:last-child) {
   /* всем элементам кроме последнего */
   margin-right: 30px;
@@ -137,11 +143,12 @@ p {
 }
 
 .contacts {
+  display: flex;
+  align-items: center;
   list-style: none;
 
   padding: 0;
   margin-left: auto;
-  display: flex;
 }
 
 .contact {
@@ -150,11 +157,17 @@ p {
 
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact__svg {
   margin-right: 10px;
   fill: var(--social-network-rest, gray);
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact__svg.envelope__icon {
@@ -394,8 +407,7 @@ p {
 }
 
 .pictures__item {
-  position: relative;
-  height: 294px; /* без этого атрибута появляются 3px внизу*/
+  position: relative; /* без этого атрибута появляются 3px внизу*/
 }
 
 .pictures__item:not(:last-child) {
@@ -542,6 +554,9 @@ p {
   width: 106px;
   height: 60px;
   fill: var(--social-network-rest, gray);
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client__brand:hover .client__svg,
@@ -730,7 +745,7 @@ p {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  /*visibility?*/
+  visibility: hidden;
 }
 
 .modal {
